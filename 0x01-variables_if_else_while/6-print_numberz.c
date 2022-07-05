@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all single digit numbers of base 10 starting from
- * You are not allowed to use any variable of type char
- * You can only use the putchar function
- * Return: 0
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int n = 48;
-while (n <= 57)
+int ch;
+for (ch = 48; ch <= 57; ch++)
 {
-putchar(n);
-n += 1;
+
+putchar(ch);
 }
-printf("\n");
+
+putchar(10); /* this is an ascii code for new line*/
+
 return (0);
 }
