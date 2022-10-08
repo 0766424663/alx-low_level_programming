@@ -1,29 +1,30 @@
 #include "holberton.h"
-
 /**
- * _strcat - entry point
- * @dest: string destination
- * @src: string source
- * Description: prints a string, followed by a new line, to stdout.
- * Return: pointer to the resulting string dest
+ *_strcat -  concatenates two strings
+ *@dest: A pointer to an char that will be updated
+ *@src: A pointer to an char that will be updated
+ *Return: dest
  */
 
 char *_strcat(char *dest, char *src)
 {
+	int i, j;
 
-char *ptr;
-int longitud = 0;
+	i = 0;
+	while (dest[i] != '\0') /*WHILE count character */
+	{
+		i++;
+	}
 
-while (dest[longitud] != '\0')
-longitud++;
+	j = 0;
+	while (src[j] != '\0') /*WHILE concatenate dest with src*/
+	{
+		dest[i] = src[j];
+		j++;  /*sum j*/
+		i++; /**sum i*/
+	}
 
-ptr = dest + longitud;
+	dest[i] = '\0'; /*the terminating null byte*/
 
-while (*src != '\0')
-*ptr++ = *src++;
-
-*ptr = '\0';
-
-return (dest);
+	return (dest);
 }
-
